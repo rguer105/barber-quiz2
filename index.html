@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbering Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f5;
+            color: #222;
+            margin: 0;
+            padding: 25px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #16324f;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+        }
+
+        button {
+            background: #16324f;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Barbering Quiz</h1>
+        <p>Choose one answer for questions 1–2.
+           Select all correct answers for questions 3–4.</p>
+
+        <form id="quiz">
+            <fieldset>
+                <legend>1. Which tool is commonly used for fades?</legend>
+                <label>
+                    <input type="radio" name="q1" value="clippers" required>
+                    Clippers
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="dryer">
+                    Blow dryer
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="rollers">
+                    Hair rollers
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. What should a barber do when a client requests a trim?</legend>
+                <label>
+                    <input type="radio" name="q2" value="cut" required>
+                    Immediately cut off two inches
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="clarify">
+                    Clarify how much hair the client wants removed
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="ignore">
+                    Ignore the client's request
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Which tools are used to cut hair?</legend>
+                <p>Select all correct answers.</p>
+                <label>
+                    <input type="checkbox" name="q3" value="shears">
+                    Cutting shears
+                </label>
+                <label>
+                    <input type="checkbox" name="q3" value="clippers">
+                    Clippers
+                </label>
+                <label>
+                    <input type="checkbox" name="q3" value="towel">
+                    Towel
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. Which topics belong in a haircut consultation?</legend>
+                <p>Select all correct answers.</p>
+                <label>
+                    <input type="checkbox" name="q4" value="style">
+                    The client's desired hairstyle
+                </label>
+                <label>
+                    <input type="checkbox" name="q4" value="length">
+                    How much length to remove
+                </label>
+                <label>
+                    <input type="checkbox" name="q4" value="password">
+                    The client's email password
+                </label>
+            </fieldset>
+
+<button type="button" onclick="checkAnswers()">
+    Check Answers
+    <p id="result" role="status"></p>
+        </form>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
